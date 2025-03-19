@@ -1,0 +1,16 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.main-container {
+    display: flex;
+}
+
+.content {
+    flex-grow: 1;
+    margin-left: 270px; 
+    padding-top: 90px;
+    padding-left: 40px;
+    padding-right: 25px;
+}

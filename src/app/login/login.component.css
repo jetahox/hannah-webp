@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.login-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: url('/assets/login-bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background: rgba(254, 251, 251, 0.812);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+    width: 600px;
+    height: 380px;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    
+}
+
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 15px;
+
+}
+
+.login-logo {
+    width: 120px;
+    height: auto;
+
+}
+
+
+/* .login-box h2 {
+    margin-bottom: 20px;
+} */
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    padding: 20px;
+}
+.password-container {
+    text-align: right;
+    margin-top: 10px; 
+}
+
+.password-link {
+    display: inline-block;
+    color: black;
+}
+
+
+.login-box button {
+   margin-top: 30px;
+    width: 100%;
+    padding: 25px;
+    background: rgb(221 51 51);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.login-box button:hover {
+    background: #d82537;
+}

@@ -1,0 +1,42 @@
+<div class="login-page">
+  <div class="login-box">
+    <div class="title-container">
+      <h2>Einloggen</h2>
+      <img src="assets/logo.jpg" alt="Logo" class="login-logo" />
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <input
+        type="text"
+        name="email"
+        placeholder="E-Mail eingeben"
+        formControlName="email"
+      />
+
+      @if (form.controls["email"].touched && form.controls["email"].invalid) {
+        <p style="color: red">Bitte eine gültige E-Mail-Adresse eingeben!</p>
+      }
+
+      <input
+        type="password"
+        name="password"
+        placeholder="Passwort"
+        formControlName="password"
+      />
+
+      @if (
+        form.controls["password"].touched && form.controls["password"].invalid
+      ) {
+        <p style="color: red">
+          Passwort muss zwischen 6 und 10 Zeichen lang sein!
+        </p>
+      }
+
+      <div class="password-container">
+        <a href="#" class="password-link">Haben Sie Ihr Passwort vergessen?</a>
+      </div>
+
+      <button type="submit">Jetzt einloggen</button>
+    </form>
+  </div>
+</div>

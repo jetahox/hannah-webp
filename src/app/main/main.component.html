@@ -1,0 +1,12 @@
+<div class="main-container">
+  <app-sidebar></app-sidebar>
+
+  <div class="content">
+    <app-header></app-header>
+    <ng-container *ngIf="showMainContent">
+      <app-main-content></app-main-content>
+    </ng-container>
+    <router-outlet (activate)="showMainContent = false"></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>
