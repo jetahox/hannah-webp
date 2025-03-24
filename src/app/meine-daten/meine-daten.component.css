@@ -1,59 +1,99 @@
 .meine-daten-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: white;
-    /* padding: 60px; */
-    border-radius: 8px;
-    max-width: 900px;
-    /* margin: auto; */
-  }
-  
-  .user-info, .change-password {
-    padding: 15px;
-    border-radius: 5px;
-    background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 10px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 70px;
+}
 
-  }
-  
-  h2 {
-    font-size: 2rem;
-    font-weight: 300;
 
-  }
-  
-  p {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    margin-top: 15px;
-    width: 100%;
-    padding: 10px;
-    background: rgb(221, 51, 51);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: rgb(200, 40, 40);
-  }
-  
+.user-info, .change-password {
+  padding: 25px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.change-password {
+  margin-top: 40px;
+}
+
+h2{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* .change-password h2 {
+  font-size: 2rem;
+  font-weight: 300;
+} */
+
+.user-info .input-group,
+.change-password .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info .input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.user-info .input-row .input-group {
+  width: 50%;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+input:focus {
+  border-bottom: 2px solid #d33;
+}
+
+
+.button-container, .button-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container button, .button-center button {
+  width: 35%;
+  padding: 12px;
+  background: rgb(223, 223, 223);
+  border: none;
+  color: #aeadad;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.button-container button:hover, .button-center button:hover {
+  background: rgb(200, 40, 40);
+  color: white;
+}
