@@ -1,12 +1,21 @@
 <div class="main-container">
-  <app-sidebar></app-sidebar>
+  <app-sidebar (navigate)="activeView = $event"></app-sidebar>
 
   <div class="content">
-    <app-header></app-header>
-    <ng-container *ngIf="showMainContent">
+    <app-header (navigate)="changeView($event)"></app-header>
+
+    <ng-container *ngIf="activeView === 'main'">
       <app-main-content></app-main-content>
     </ng-container>
-    <router-outlet (activate)="showMainContent = false"></router-outlet>
+
+    <ng-container *ngIf="activeView === 'meine-daten'">
+      <app-meine-daten></app-meine-daten>
+    </ng-container>
+
+    <ng-container *ngIf="activeView === 'hilfe'">
+      <app-hilfe></app-hilfe>
+    </ng-container>
+
     <app-footer></app-footer>
   </div>
 </div>

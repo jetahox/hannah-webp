@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css'],
-  standalone: true,
-  imports: [CommonModule, RouterModule] 
+  styleUrl: './sidebar.component.css'
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+  @Output() navigate = new EventEmitter<string>();
+}

@@ -3,36 +3,26 @@
     <img src="assets/logo.jpg" alt="Logo" class="logo" />
   </div>
   <ul class="nav-list">
-    <li routerLinkActive="active">
-      <i class="fas fa-home"></i><a routerLink="/dashboard">Übersicht</a>
+    <li (click)="navigate.emit('main')" routerLinkActive="active">
+      <i class="fas fa-home"></i> <a>Übersicht</a>
     </li>
-    <li>
-      <i class="fas fa-user"></i
-      ><a routerLink="/meine-daten" routerLinkActive="active">Meine Daten</a>
+    <li (click)="navigate.emit('meine-daten')" routerLinkActive="active">
+      <i class="fas fa-user"></i> <a>Meine Daten</a>
     </li>
-    <li>
-      <i class="fas fa-address-book"></i
-      ><a routerLink="/kontakte" routerLinkActive="active"
-        >Kontakte verwalten</a
-      >
+    <li (click)="navigate.emit('kontakte')" routerLinkActive="active">
+      <i class="fas fa-address-book"></i> <a>Kontakte verwalten</a>
     </li>
-    <li>
-      <i class="fas fa-file-alt"></i
-      ><a routerLink="/dokumente" routerLinkActive="active">Dokumente</a>
+    <li (click)="navigate.emit('dokumente')" routerLinkActive="active">
+      <i class="fas fa-file-alt"></i> <a>Dokumente</a>
     </li>
-    <li>
-      <i class="fas fa-question-circle"></i
-      ><a routerLink="/hilfe" routerLinkActive="active">Hilfe</a>
+    <li (click)="navigate.emit('hilfe')" routerLinkActive="active">
+      <i class="fas fa-question-circle"></i> <a>Hilfe</a>
     </li>
-    <li>
-      <i class="fas fa-shield-alt"></i
-      ><a routerLink="/datenschutz" routerLinkActive="active">Datenschutz</a>
+    <li (click)="navigate.emit('datenschutz')" routerLinkActive="active">
+      <i class="fas fa-shield-alt"></i> <a>Datenschutz</a>
     </li>
-    <li>
-      <i class="fas fa-cookie-bite"></i
-      ><a routerLink="/cookies" routerLinkActive="active"
-        >Cookie Einstellungen</a
-      >
+    <li (click)="navigate.emit('cookies')" routerLinkActive="active">
+      <i class="fas fa-cookie-bite"></i> <a>Cookie Einstellungen</a>
     </li>
   </ul>
 </div>

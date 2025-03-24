@@ -52,8 +52,9 @@
 .nav-list a {
     text-decoration: none;
     color: #646566;
-    font-size: 20px; 
+    font-size: 18px; 
     flex-grow: 1;
+    cursor: pointer;
 }
 
 .nav-list li.active {

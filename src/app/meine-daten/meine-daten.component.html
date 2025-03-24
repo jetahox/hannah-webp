@@ -1,1 +1,39 @@
-<p>meine-daten works!</p>
+<div class="meine-daten-container">
+  <h2>Mein Konto</h2>
+  <div class="user-info">
+    <p><strong>Name:</strong> Jeta Hoxha</p>
+    <p><strong>Email:</strong> jetahoxha3&#64;gmail.com</p>
+    <p><strong>Telefon:</strong> +383 45 111 186</p>
+  </div>
+
+  <div class="change-password">
+    <h2>Passwort ändern</h2>
+    <form (submit)="changePassword()">
+      <label for="oldPassword">Altes Passwort:</label>
+      <input
+        type="password"
+        id="oldPassword"
+        [(ngModel)]="oldPassword"
+        required
+      />
+
+      <label for="newPassword">Neues Passwort:</label>
+      <input
+        type="password"
+        id="newPassword"
+        [(ngModel)]="newPassword"
+        required
+      />
+
+      <label for="confirmPassword">Passwort bestätigen:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        [(ngModel)]="confirmPassword"
+        required
+      />
+
+      <button type="submit">Passwort ändern</button>
+    </form>
+  </div>
+</div>

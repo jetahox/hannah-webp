@@ -6,16 +6,21 @@
     </div>
 
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <p *ngIf="showFormError" style="color: red; text-align: center">
+        Bitte füllen Sie alle Felder aus!
+      </p>
       <input
-        type="text"
+        type="email"
         name="email"
-        placeholder="E-Mail eingeben"
+        placeholder="E-Mail"
         formControlName="email"
       />
-
-      @if (form.controls["email"].touched && form.controls["email"].invalid) {
-        <p style="color: red">Bitte eine gültige E-Mail-Adresse eingeben!</p>
-      }
+      <p
+        *ngIf="form.controls['email'].touched && form.controls['email'].invalid"
+        style="color: red"
+      >
+        Bitte eine gültige E-Mail-Adresse eingeben!
+      </p>
 
       <input
         type="password"
@@ -23,14 +28,14 @@
         placeholder="Passwort"
         formControlName="password"
       />
-
-      @if (
-        form.controls["password"].touched && form.controls["password"].invalid
-      ) {
-        <p style="color: red">
-          Passwort muss zwischen 6 und 10 Zeichen lang sein!
-        </p>
-      }
+      <p
+        *ngIf="
+          form.controls['password'].touched && form.controls['password'].invalid
+        "
+        style="color: red"
+      >
+        Passwort muss zwischen 6 und 10 Zeichen lang sein!
+      </p>
 
       <div class="password-container">
         <a href="#" class="password-link">Haben Sie Ihr Passwort vergessen?</a>
