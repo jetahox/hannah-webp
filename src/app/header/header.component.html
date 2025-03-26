@@ -2,26 +2,45 @@
   <div class="header-title">Trudo Main Account</div>
 
   <div class="profile-container" (click)="toggleDropdown()">
-    <div class="profile-icon">J</div>
+    <div class="profile-icon"></div>
 
     <div class="dropdown-menu" *ngIf="dropdownOpen">
-      <p (click)="goTo('meine-daten')">
-        <i class="fas fa-home" style="color: lightgray; padding-right: 10px"></i
-        >Meine Daten
+      <div class="account-container">
+        <div class="account-item">
+          <span class="username">Trudo Main Account</span>
+          <div class="profile-icon"></div>
+        </div>
+        <hr />
+        <div class="account-item">
+          <span class="username">Trudo Zyre</span>
+          <div class="placeholder-icon"></div>
+        </div>
+        <hr />
+        <div class="account-item">
+          <span class="username">Care Hannah Office</span>
+          <div class="placeholder-icon"></div>
+        </div>
+      </div>
+      <p (click)="goTo('meine-daten')" class="p-style">
+        <i
+          class="fas fa-home"
+          style="color: lightgray; padding-right: 10px"
+        ></i>
+        Meine Daten
       </p>
-      <p (click)="goTo('hilfe')">
+      <p (click)="goTo('hilfe')" class="p-style">
         <i
           class="fas fa-question-circle"
           style="color: lightgray; padding-right: 10px"
-        ></i
-        >Hilfe
+        ></i>
+        Hilfe
       </p>
-      <p (click)="logout()">
+      <p (click)="logout()" class="p-style">
         <i
           class="fas fa-sign-out-alt"
           style="color: lightgray; padding-right: 10px"
-        ></i
-        >Logout
+        ></i>
+        Logout
       </p>
     </div>
   </div>
