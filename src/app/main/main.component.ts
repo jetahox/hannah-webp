@@ -24,7 +24,8 @@ import { ActivatedRoute, Router } from '@angular/router';
     NgIf
   ],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  styleUrl: './main.component.css',
+  standalone:true,
 })
 export class MainComponent {
   activeView: string = 'main';
