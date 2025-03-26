@@ -1,3 +1,6 @@
+body{
+    background-color: #BBBBBB !important;
+}
 .page-content {
     background-color: #bbbbbb4d;
     background-image: url('/assets/dashboard-image.png');

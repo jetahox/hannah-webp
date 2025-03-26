@@ -4,7 +4,9 @@
   font-family: 'Poppins', sans-serif;
   padding: 20px;
   text-align: left;
-  width: 80%;
+  width: 77%;
+  /* left:19%; */
+  right: 0;
   font-size: 20px;
   position:fixed;
   bottom: 0;
