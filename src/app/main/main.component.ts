@@ -4,11 +4,11 @@ import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { MainContentComponent } from '../main-content/main-content.component';
 import { MeineDatenComponent } from '../meine-daten/meine-daten.component';
-import { KontakteComponent } from '../kontakte/kontakte.component';
-import { DokumenteComponent } from '../dokumente/dokumente.component';
+// import { KontakteComponent } from '../kontakte/kontakte.component';
+// import { DokumenteComponent } from '../dokumente/dokumente.component';
 import { HilfeComponent } from '../hilfe/hilfe.component';
-import { DatenschutzComponent } from '../datenschutz/datenschutz.component';
-import { CookiesComponent } from '../cookies/cookies.component';
+// import { DatenschutzComponent } from '../datenschutz/datenschutz.component';
+// import { CookiesComponent } from '../cookies/cookies.component';
 import { NgIf } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -20,11 +20,7 @@ import { ActivatedRoute, Router } from '@angular/router';
     FooterComponent,
     MainContentComponent,
     MeineDatenComponent,
-    KontakteComponent,
-    DokumenteComponent,
     HilfeComponent,
-    DatenschutzComponent,
-    CookiesComponent,
     NgIf
   ],
   templateUrl: './main.component.html',

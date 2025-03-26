@@ -1,3 +1,5 @@
+<!-- <div class="meine-daten-container"> -->
+<h1>Meine Daten</h1>
 <div class="user-info">
   <div class="input-group">
     <h2 class="personal-data">Persönliche Daten</h2>
@@ -25,32 +27,43 @@
 <div class="change-password">
   <h2>Passwort ändern</h2>
   <form (submit)="changePassword()">
-    <label for="oldPassword">Altes Passwort:</label>
-    <input
-      type="password"
-      id="oldPassword"
-      [(ngModel)]="oldPassword"
-      required
-    />
+    <div class="password-row">
+      <div class="input-group half-width">
+        <label for="oldPassword">Altes Passwort:</label>
+        <input
+          type="password"
+          id="oldPassword"
+          [(ngModel)]="oldPassword"
+          required
+        />
+      </div>
+    </div>
 
-    <label for="newPassword">Neues Passwort:</label>
-    <input
-      type="password"
-      id="newPassword"
-      [(ngModel)]="newPassword"
-      required
-    />
+    <div class="password-row">
+      <div class="input-group half-width">
+        <label for="newPassword">Neues Passwort:</label>
+        <input
+          type="password"
+          id="newPassword"
+          [(ngModel)]="newPassword"
+          required
+        />
+      </div>
 
-    <label for="confirmPassword">Passwort bestätigen:</label>
-    <input
-      type="password"
-      id="confirmPassword"
-      [(ngModel)]="confirmPassword"
-      required
-    />
+      <div class="input-group half-width">
+        <label for="confirmPassword">Passwort bestätigen:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          required
+        />
+      </div>
+    </div>
 
     <div class="button-center">
       <button type="submit">Passwort ändern</button>
     </div>
   </form>
 </div>
+<!-- </div> -->

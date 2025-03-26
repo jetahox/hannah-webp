@@ -5,8 +5,7 @@ import { MainComponent } from './main/main.component';
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  {
-    path: 'main',
-    component: MainComponent},
-      { path: 'dashboard', component: MainComponent },
+  { path: 'main', component: MainComponent },
+  { path: 'dashboard', component: MainComponent },
+
 ];

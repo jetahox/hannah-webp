@@ -10,69 +10,71 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 70px;
 }
-
+h1{
+  font-size:2.5rem;
+  font-weight: 400;
+}
 
 .user-info, .change-password {
-  padding: 25px;
+  padding: 55px;
   border-radius: 8px;
   background: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 80px;
 }
-
 
 .change-password {
   margin-top: 40px;
 }
 
-h2{
+h2 {
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-/* .change-password h2 {
-  font-size: 2rem;
-  font-weight: 300;
-} */
-
-.user-info .input-group,
-.change-password .input-group {
+.input-group {
   display: flex;
   flex-direction: column;
+
+
 }
 
-.user-info .input-row {
+.user-info .input-row, 
+.password-row {
   display: flex;
   gap: 20px;
 }
 
-.user-info .input-row .input-group {
+.user-info .input-row .input-group,
+.password-row .input-group {
   width: 50%;
+
 }
 
 label {
   font-size: 0.9rem;
   color: #666;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 input {
   width: 100%;
-  padding: 8px 0;
+  padding: 20px 0px;
   border: none;
   border-bottom: 2px solid #ccc;
   border-radius: 0;
   outline: none;
   background: transparent;
   font-size: 1rem;
+  margin-bottom:10px;
 }
 
 input:focus {
   border-bottom: 2px solid #d33;
 }
-
 
 .button-container, .button-center {
   display: flex;
