@@ -3,25 +3,23 @@
     <img src="assets/logo.jpg" alt="Logo" class="logo" />
   </div>
   <ul class="nav-list">
-    <li (click)="navigate.emit('main')" routerLinkActive="active">
-      <i class="fas fa-home"></i> <a>Übersicht</a>
-    </li>
-    <li (click)="navigate.emit('meine-daten')" routerLinkActive="active">
+    <li routerLink="/main"><i class="fas fa-home"></i> <a>Übersicht</a></li>
+    <li routerLink="/main/meine-daten">
       <i class="fas fa-user"></i> <a>Meine Daten</a>
     </li>
-    <li (click)="navigate.emit('kontakte')" routerLinkActive="active">
+    <li routerLink="/kontakte">
       <i class="fas fa-address-book"></i> <a>Kontakte verwalten</a>
     </li>
-    <li (click)="navigate.emit('dokumente')" routerLinkActive="active">
+    <li routerLink="/dokumente">
       <i class="fas fa-file-alt"></i> <a>Dokumente</a>
     </li>
-    <li (click)="navigate.emit('hilfe')" routerLinkActive="active">
+    <li routerLink="/hilfe">
       <i class="fas fa-question-circle"></i> <a>Hilfe</a>
     </li>
-    <li (click)="navigate.emit('datenschutz')" routerLinkActive="active">
+    <li routerLink="/datenschutz">
       <i class="fas fa-shield-alt"></i> <a>Datenschutz</a>
     </li>
-    <li (click)="navigate.emit('cookies')" routerLinkActive="active">
+    <li routerLink="/cookies">
       <i class="fas fa-cookie-bite"></i> <a>Cookie Einstellungen</a>
     </li>
   </ul>

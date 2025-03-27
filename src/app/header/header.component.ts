@@ -1,15 +1,17 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
 import { NgIf, CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   standalone: true,
-  imports: [CommonModule, NgIf]
+  imports: [CommonModule, NgIf,RouterModule]
 })
 export class HeaderComponent {
   dropdownOpen = false;

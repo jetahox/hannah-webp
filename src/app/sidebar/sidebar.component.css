@@ -57,13 +57,13 @@
     cursor: pointer;
 }
 
-.nav-list li.active {
+/* .nav-list li.active {
     background-color: rgb(221, 51, 51);
     color: white;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 
-  }
+  } */
   .nav-list li.active a{
     color: white !important; 
   }

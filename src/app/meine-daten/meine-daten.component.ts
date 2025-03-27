@@ -9,7 +9,8 @@ import { FooterComponent } from "../footer/footer.component";
   standalone: true,
   templateUrl: './meine-daten.component.html',
   styleUrl: './meine-daten.component.css',
-  imports: [CommonModule, FormsModule, FooterComponent]
+  imports: [CommonModule, FormsModule, FooterComponent],
+  
 })
 export class MeineDatenComponent {
   oldPassword = '';
