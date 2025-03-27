@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FooterComponent } from "../footer/footer.component";
+
 
 
 @Component({
@@ -9,7 +9,7 @@ import { FooterComponent } from "../footer/footer.component";
   standalone: true,
   templateUrl: './meine-daten.component.html',
   styleUrl: './meine-daten.component.css',
-  imports: [CommonModule, FormsModule, FooterComponent],
+  imports: [CommonModule, FormsModule]
   
 })
 export class MeineDatenComponent {
