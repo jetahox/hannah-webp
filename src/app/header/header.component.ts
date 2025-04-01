@@ -1,24 +1,31 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
-import { NgIf, CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { Output } from '@angular/core';
-import { EventEmitter } from '@angular/core';
 
-
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   standalone: true,
-  imports: [CommonModule, NgIf,RouterModule]
+  imports: [CommonModule, RouterModule],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   dropdownOpen = false;
+  currentUsername: string = 'Trudo Main Account'; 
 
-  @Output() navigate = new EventEmitter<string>();
+  constructor(private eRef: ElementRef, private router: Router, private route: ActivatedRoute) {}
 
-  constructor(private eRef: ElementRef) {}
+  ngOnInit() {
+    this.router.events.subscribe(() => {
+      const currentRoute = this.router.url;
+      if (currentRoute.includes('details')) {
+        this.currentUsername = 'Trudo Main Account (Trudo Zyre)';
+      } else {
+        this.currentUsername = 'Trudo Main Account';
+      }
+    });
+  }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
@@ -31,12 +38,20 @@ export class HeaderComponent {
     }
   }
 
-  goTo(view: string) {
-    this.navigate.emit(view);
-    this.dropdownOpen = false;
+
+  goToMain() {
+    this.router.navigate(['/main']);
+  }
+
+  goToDetails() {
+    this.router.navigate(['/main/details']);
   }
 
   logout() {
     window.location.href = '/login';
   }
 }
+
+
+
+

@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { MeineDatenComponent } from './meine-daten/meine-daten.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { DetailsComponent } from './details/details.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -12,13 +13,8 @@ export const routes: Routes = [
     component: MainComponent,
     children: [
       { path: '', pathMatch: 'full', component: MainContentComponent }, 
-      { path: 'meine-daten', component: MeineDatenComponent }
+      { path: 'meine-daten', component: MeineDatenComponent },
+      { path: 'details', component: DetailsComponent }
     ]
   }
 ];
-
-
-
-
-
-

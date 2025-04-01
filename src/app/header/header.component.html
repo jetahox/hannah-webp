@@ -1,17 +1,18 @@
 <header class="header">
-  <div class="header-title">Trudo Main Account</div>
+  <div class="header-title">{{ currentUsername }}</div>
 
   <div class="profile-container" (click)="toggleDropdown()">
     <div class="profile-icon"></div>
 
     <div class="dropdown-menu" *ngIf="dropdownOpen">
       <div class="account-container">
-        <div class="account-item">
+        <div class="account-item" (click)="goToMain()">
           <span class="username">Trudo Main Account</span>
           <div class="profile-icon"></div>
         </div>
         <hr />
-        <div class="account-item">
+
+        <div class="account-item" (click)="goToDetails()">
           <span class="username">Trudo Zyre</span>
           <div class="placeholder-icon"></div>
         </div>
@@ -21,14 +22,15 @@
           <div class="placeholder-icon"></div>
         </div>
       </div>
-      <p (click)="goTo('meine-daten')" class="p-style">
+
+      <p class="p-style">
         <i
           class="fas fa-home"
           style="color: lightgray; padding-right: 10px"
         ></i>
         Meine Daten
       </p>
-      <p (click)="goTo('hilfe')" class="p-style">
+      <p class="p-style">
         <i
           class="fas fa-question-circle"
           style="color: lightgray; padding-right: 10px"

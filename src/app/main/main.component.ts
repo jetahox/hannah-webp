@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { HeaderComponent } from '../header/header.component';
-import { FooterComponent } from '../footer/footer.component';
 import { MainContentComponent } from '../main-content/main-content.component';
 import { MeineDatenComponent } from '../meine-daten/meine-daten.component';
 import { HilfeComponent } from '../hilfe/hilfe.component';
@@ -12,7 +11,6 @@ import { HilfeComponent } from '../hilfe/hilfe.component';
   imports: [
     SidebarComponent,
     HeaderComponent,
-    FooterComponent,
     MainContentComponent,
     MeineDatenComponent,
     HilfeComponent,

@@ -1,7 +1,7 @@
 .header {
   background-color: rgb(221, 51, 51);
   color: white;
-  height: 60px;
+  height: 72px; 
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -10,7 +10,7 @@
   top: 0;
   right: 0;
   width: 77%;
-  z-index: 1000; 
+  z-index: 1000;
 }
 
 .header-title {
@@ -21,16 +21,16 @@
 
 @media (max-width: 1024px) {
   .header {
-    left: 250px; 
+    left: 250px;
     width: calc(100% - 250px);
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    left: 0; 
+    left: 0;
     width: 100%;
-    justify-content: center; 
+    justify-content: center;
   }
 
   .header-title {
@@ -41,7 +41,7 @@
 
 @media (max-width: 480px) {
   .header {
-    height: 50px;
+    height: 50px; 
     padding: 5px 10px;
   }
 
@@ -49,50 +49,6 @@
     font-size: 1.2rem;
     padding: 5px;
   }
-}
-
-.profile-container {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.profile-icon {
-  width: 40px;
-  height: 40px;
-  background-image: url(/assets/pfp.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.header {
-  background-color: rgb(221, 51, 51);
-  color: white;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 77%;
-  z-index: 1000;
-}
-
-.header-title {
-  padding: 35px;
-  padding-right: 15px;
-  font-size: 1.5rem;
 }
 
 .profile-container {
@@ -161,11 +117,10 @@
 hr {
   border: none;
   border-top: 1px solid #e0dede;
-  /* margin: 10px 0; */
 }
 
 .p-style {
-  color: #757575;
+  color: #514848;
   padding: 10px 10px;
   margin: 0;
   cursor: pointer;
