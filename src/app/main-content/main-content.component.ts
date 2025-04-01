@@ -13,27 +13,23 @@ import { Router } from '@angular/router';
 })
 export class MainContentComponent implements OnInit {
   trudoText: string = 'Im moment kein alarm in Trudo Zyre.'; 
-  users: User[] = [];
+  // users: User[] = [];
 
-  constructor(private apiService: ApiService , private router:Router) {}
+  constructor(private apiService: ApiService , private router: Router) {}
 
   ngOnInit() {
+    /*
     this.apiService.getUsers().subscribe((response) => {
       this.users = response.slice(0, 5);  
       this.trudoText = this.users
         .map(user => user.name)
         .join(', '); 
     });
+    */
   }
-  goToDetails(){
+  
+  goToDetails() {
     this.router.navigate(['/main/details']);
-    console.log('details')
+    console.log('details');
   }
 }
-
-
-
-
-
-
-
