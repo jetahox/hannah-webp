@@ -9,9 +9,8 @@
   position: absolute;
   top: 0;
   right: 0;
-  /* width: 77%; */
-  width: 76.6%;
-  z-index: 1000;
+  width: 77.3%;
+   z-index: 1000;
 }
 
 .header-title {
