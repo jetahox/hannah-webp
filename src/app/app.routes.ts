@@ -5,6 +5,7 @@ import { MeineDatenComponent } from './meine-daten/meine-daten.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { DetailsComponent } from './details/details.component';
 
+
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },

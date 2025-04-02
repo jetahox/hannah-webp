@@ -109,11 +109,11 @@ input:focus {
 }
 .footer-title {
   background-color: rgb(182, 183, 184);
-  color: white;
+  color: rgb(246, 245, 245);
   font-family: 'Poppins', sans-serif;
   padding: 20px;
   text-align: left;
-  width: 77%;
+  width: 76.6%;
   right: 0;
   font-size: 20px;
   position:absolute;
