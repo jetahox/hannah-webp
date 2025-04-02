@@ -72,6 +72,7 @@
     box-shadow: 0 4px 10px rgba(12, 12, 12, 0.1);
     border-radius: 10px;
     margin-top: 20px;
+    padding-left:20px;
 }
 
 .white-box-container h3 {
@@ -170,7 +171,7 @@ hr {
     margin-top:30px;
     padding: 20px;
     text-align: left;
-    width: 77%;
+    width: 77.3%;
     right: 0;
     font-size: 20px;
     position:absolute;

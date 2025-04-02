@@ -32,8 +32,8 @@ html, body {
     padding: 20px;
     border-radius: 20px;
     text-align: left;
-    width: 600px;
-    height: 400px;
+    width: 650px;
+    height: 430px;
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
