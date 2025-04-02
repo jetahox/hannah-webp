@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+.card{
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(12, 12, 12, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-left:20px;
+    padding-bottom:20px;
+}
+
+.info-box {
+    flex: 1;
+    padding-right: 1.5rem;
+    padding-left: 1rem;
+    border: 2px solid rgb(221 51 51);
+    box-shadow: 0 0 10px #0000001a;
+    border-radius: 1rem;
+    border-width: 1px;
+    text-align: left;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.page-content {
+    background-color: #bbbbbb4d;
+    background-image: url('/assets/dashboard-image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    background-position: right;
+    flex-grow: 1;
+}
+.page-content h1 {
+    font-size: 2rem;
+    color: rgb(0 0 0 );
+    margin-bottom: 10px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+.page-content p {
+    font-size: .875rem;
+
+}

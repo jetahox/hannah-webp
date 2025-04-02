@@ -1,13 +1,13 @@
 <div class="page-content">
   <div class="text-container">
-    <h1>Herzlich willkommen, Trudo Main Account</h1>
-    <p>Hallo Trudo Main Account, dies ist die Care- und Alarmübersicht</p>
+    <h1>{{ welcomeTitle }}</h1>
+    <p>{{ welcomeText }}</p>
   </div>
 </div>
 
 <div class="info-container">
   <div class="info-box" (click)="goToDetails()">
-    <h3>Trudo Zyre</h3>
+    <h3>{{ trudoZ }}</h3>
     <p>{{ trudoText }}</p>
     <div class="icon-container">
       <img src="/assets/phoneicon.png" alt="phone icon" />
@@ -15,7 +15,7 @@
   </div>
 
   <div class="info-box">
-    <h3>Care Hannah-Office</h3>
+    <h3>{{ hannahC }}</h3>
     <p>Im moment kein alarm in Care Hannah-<br />Office</p>
     <div class="icon-container">
       <img src="/assets/phoneicon.png" alt="phone icon" />

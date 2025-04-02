@@ -13,6 +13,10 @@ import { Router } from '@angular/router';
 })
 export class MainContentComponent implements OnInit {
   trudoText: string = 'Im moment kein alarm in Trudo Zyre.'; 
+  trudoZ: string = 'Trudo Zyre';
+  hannahC: string = 'Care-Hannah Office';
+  welcomeTitle:string = 'Herzlich willkommen, Trudo Main Account';
+  welcomeText : string = 'Hallo Trudo Main Account, dies ist die Care- und Alarmübersicht';
   // users: User[] = [];
 
   constructor(private apiService: ApiService , private router: Router) {}

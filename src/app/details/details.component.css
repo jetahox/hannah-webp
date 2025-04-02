@@ -1,38 +1,9 @@
-.page-content {
-    background-color: #bbbbbb4d;
-    background-image: url('/assets/dashboard-image.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: left;
-    background-position: right;
-    flex-grow: 1;
-}
-
-.page-content h1 {
-    font-size: 2.25rem;
-    color: #333;
-    margin-bottom: 10px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 40px;
-}
-
-.page-content p {
-    font-size: .875rem;
-    margin-top: 2.5rem;
-}
-
 .red-border-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     border: 1px solid rgb(221 51 51); 
-    border-radius: 10px; 
-    margin-top: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .red-border-container:hover {
@@ -40,7 +11,7 @@
     cursor: pointer;
 }
 
-.red-border-container .red-title {
+.card .red-title {
     font-size: 1.5rem;
     color: rgb(221 51 51);
     font-weight: 500;
@@ -48,7 +19,7 @@
     padding: 5px;
 }
 
-.red-border-container .image-container {
+.card .image-container {
     border: 2px solid black; 
     border-radius: 50%;
     padding: 10px;
@@ -60,29 +31,19 @@
     background-color: white; 
 }
 
-.red-border-container .image-container img {
+.card .image-container img {
     width: 30px;
     height: 30px;
 }
 
-
-.white-box-container {
-    background-color: white;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(12, 12, 12, 0.1);
-    border-radius: 10px;
-    margin-top: 20px;
-    padding-left:20px;
-}
-
-.white-box-container h3 {
+.card h3 {
     font-size: 1.25rem;
     color: #757575;
     font-weight: 400;
     margin-bottom: 30px;
 }
 
-.white-box-container h2 {
+.card h2 {
     font-size: 1.5rem;
     color: rgb(52, 51, 51);
     font-weight: 500;
@@ -120,14 +81,6 @@ hr {
     height: 1px;
     background-color: lightgray;
     margin: 5px 0;
-}
-
-.device-overview-container {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(12, 12, 12, 0.1);
-    border-radius: 10px;
-    margin-top: 40px;
 }
 
 .device-status {
