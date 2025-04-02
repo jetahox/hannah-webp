@@ -10,6 +10,38 @@
     >
       <i class="fas fa-home"></i> <a>Übersicht</a>
     </li>
+    <div class="sidebar">
+      <div class="logo-container" (click)="goToMain()">
+        <img src="assets/logo.jpg" alt="Logo" class="logo" />
+      </div>
+      <ul class="nav-list">
+        <li
+          routerLink="/main"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i class="fas fa-home"></i> <a>Übersicht</a>
+        </li>
+        <li routerLink="/main/meine-daten" routerLinkActive="active">
+          <i class="fas fa-user"></i> <a>Meine Daten</a>
+        </li>
+        <li routerLink="/kontakte" routerLinkActive="active">
+          <i class="fas fa-address-book"></i> <a>Kontakte verwalten</a>
+        </li>
+        <li routerLink="/dokumente" routerLinkActive="active">
+          <i class="fas fa-file-alt"></i> <a>Dokumente</a>
+        </li>
+        <li routerLink="/hilfe" routerLinkActive="active">
+          <i class="fas fa-question-circle"></i> <a>Hilfe</a>
+        </li>
+        <li routerLink="/datenschutz" routerLinkActive="active">
+          <i class="fas fa-shield-alt"></i> <a>Datenschutz</a>
+        </li>
+        <li routerLink="/cookies" routerLinkActive="active">
+          <i class="fas fa-cookie-bite"></i> <a>Cookie Einstellungen</a>
+        </li>
+      </ul>
+    </div>
     <li routerLink="/main/meine-daten" routerLinkActive="active">
       <i class="fas fa-user"></i> <a>Meine Daten</a>
     </li>
