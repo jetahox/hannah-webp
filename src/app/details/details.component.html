@@ -5,9 +5,13 @@
   </div>
 </div>
 
-<div class="red-border-container card">
+<div
+  class="card flex justify-between items-center p-4 border border-[rgb(221,51,51)]"
+>
   <div class="red-title">Kein Aktiver Alarm</div>
-  <div class="image-container">
+  <div
+    class="image-container p-2.5 bg-white border-2 border-black rounded-full w-16 h-16 flex justify-center items-center"
+  >
     <img width="50" height="50" src="/assets/phoneicon.png" alt="phone--v1" />
   </div>
 </div>
@@ -15,32 +19,50 @@
 <div class="card">
   <h2>Alarmhistorie</h2>
   <h3>Die letzten Einträge</h3>
-  <div class="entry">
-    <div class="entry-number">9100</div>
+  <div class="entry flex items-start gap-4 p-6">
+    <div
+      class="entry-number w-12 h-12 border-2 border-gray-300 rounded-full flex items-center justify-center text-base text-black p-2.5"
+    >
+      9100
+    </div>
     <p>
-      <span>Trudo Zyre</span>
-      <span>Alarm beendet; Keine Maßnahme ergriffen.</span>
-      <span>vor 28 Tage</span>
+      <span class="block text-gray-600 text-sm">Trudo Zyre</span>
+      <span class="block text-gray-600 text-sm"
+        >Alarm beendet; Keine Maßnahme ergriffen.</span
+      >
+      <span class="block text-gray-600 text-sm">vor 28 Tage</span>
     </p>
   </div>
-  <hr />
-  <div class="entry">
-    <div class="entry-number">9100</div>
+  <hr class="border-0 h-px bg-gray-300 my-1.5" />
+  <div class="entry flex items-start gap-4 p-6">
+    <div
+      class="entry-number w-12 h-12 border-2 border-gray-300 rounded-full flex items-center justify-center text-base text-black p-2.5"
+    >
+      9100
+    </div>
     <p>
-      <span>Trudo Zyre</span>
-      <span>Trudo Zyre Alarm ausgelöst</span>
-      <span>vor 28 Tage</span>
+      <span class="block text-gray-600 text-sm">Trudo Zyre</span>
+      <span class="block text-gray-600 text-sm"
+        >Trudo Zyre Alarm ausgelöst</span
+      >
+      <span class="block text-gray-600 text-sm">vor 28 Tage</span>
     </p>
   </div>
-  <hr />
+  <hr class="border-0 h-px bg-gray-300 my-1.5" />
 </div>
 
 <div class="card">
-  <h2>Geräteübersicht</h2>
-  <h3>Batteriestatus</h3>
-  <div class="device-status">
-    <div class="device-box">
-      <p>MAT German Number</p>
+  <h2 class="text-2xl text-[rgb(52, 51, 51)] font-medium text-left">
+    Geräteübersicht
+  </h2>
+  <h3 class="text-l text-slate-500 font-medium mb-6 text-left">
+    Batteriestatus
+  </h3>
+  <div class="device-status flex gap-6">
+    <div
+      class="device-box p-5 py-2.5 w-[300px] h-[150px] shadow-lg rounded-lg text-left"
+    >
+      <p class="font-medium text-xl text-slate-700 pb-15">MAT German Number</p>
       <img
         width="30"
         height="30"
@@ -48,8 +70,10 @@
         alt="battery-full"
       />
     </div>
-    <div class="device-box">
-      <p>Elsa Hannah Device</p>
+    <div
+      class="device-box p-5 py-2.5 w-[300px] h-[150px] shadow-lg rounded-lg text-left"
+    >
+      <p class="font-medium text-xl text-slate-700 pb-15">Elsa Hannah Device</p>
       <img
         width="30"
         height="30"

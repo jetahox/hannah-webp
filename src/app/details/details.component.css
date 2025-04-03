@@ -1,4 +1,4 @@
-.red-border-container {
+/* .red-border-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,52 +11,15 @@
     cursor: pointer;
 }
 
-.card .red-title {
-    font-size: 1.5rem;
-    color: rgb(221 51 51);
-    font-weight: 500;
-    margin-bottom: 60px;
-    padding: 5px;
-}
-
-.card .image-container {
-    border: 2px solid black; 
-    border-radius: 50%;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white; 
-}
-
-.card .image-container img {
-    width: 30px;
-    height: 30px;
-}
-
-.card h3 {
-    font-size: 1.25rem;
-    color: #757575;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    color: rgb(52, 51, 51);
-    font-weight: 500;
-}
 
 .entry {
     display: flex;
     align-items: flex-start;
     gap: 15px;
     padding: 10px 0;
-}
+} */
 
-.entry-number {
+/* .entry-number {
     width: 50px;
     height: 50px;
     border: 2px solid lightgray;
@@ -67,64 +30,61 @@
     font-size: 1rem;
     color: black;
     padding: 10px;
-}
-
+} */
+/* 
 p span {
     display: block; 
     color: #757575;
     font-size: 14px; 
-    line-height: 1.2; 
-}
+} */
 
-hr {
+/* hr {
     border: none;
     height: 1px;
     background-color: lightgray;
     margin: 5px 0;
-}
+} */
 
-.device-status {
+/* .device-status {
     display: flex;
     gap: 20px;
-}
+} */
 
-.device-box {
-    background-color: white;
+/* .device-box {
     padding: 10px 60px 10px 60px;
     width: 200px;
     height: 120px;
     box-shadow: 0 4px 10px rgba(12, 12, 12, 0.1);
     border-radius: 10px;
     text-align: left;
-}
+} */
 
-.device-box p {
+/* .device-box p {
     font-weight: 500;
     color: #383737;
-}
+} */
 
-.device-overview-container h2 {
+/* .device-overview-container h2 {
     font-size: 1.5rem;
     color: rgb(52, 51, 51);
     font-weight: 500;
     text-align: left;
-}
+} */
 
-.device-overview-container h3 {
+/* .device-overview-container h3 {
     font-size: 1.25rem;
     color: #757575;
     font-weight: 400;
     margin-bottom: 30px;
     text-align: left;
-}
+} */
 .footer-title {
     background-color: rgb(182, 183, 184);
     color: white;
-    font-family: 'Poppins', sans-serif;
     margin-top:30px;
     padding: 20px;
     text-align: left;
-    width: 77.3%;
+    width: 80%;
     right: 0;
     font-size: 20px;
     position:absolute;

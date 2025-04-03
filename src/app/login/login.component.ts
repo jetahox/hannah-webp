@@ -20,7 +20,7 @@ export class LoginComponent {
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     });
   }
-
+  
   onSubmit() {
     if (this.form.invalid) {
       this.showFormError = true;
