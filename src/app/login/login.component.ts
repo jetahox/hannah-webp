@@ -29,6 +29,6 @@ export class LoginComponent {
 
     this.showFormError = false;
     console.log('Form Data:', this.form.value);
-    this.router.navigate(['/main']);
+    this.router.navigate(['/main']); 
   }
 }
