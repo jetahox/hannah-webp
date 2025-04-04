@@ -1,45 +1,3 @@
-h1{
-  font-size:2rem;
-  font-weight: 400;
-  margin-top: 0px;
-  margin-bottom: 5px;
-}
-.profile-picture-container {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  box-shadow: 0 2px 20px rgba(27, 27, 27, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-  margin-bottom:20px;
-}
-
-.profile-picture {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-
-.user-info, .change-password {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 60px;
-}
-
-.change-password {
-  margin-top: 40px;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-
 .input-group {
   display: flex;
   flex-direction: column;
@@ -80,13 +38,6 @@ input {
 
 input:focus {
   border-bottom: 2px solid #d33;
-}
-
-.button-container, .button-center {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-
 }
 
 .button-container button, .button-center button {

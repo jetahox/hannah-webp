@@ -1,12 +1,24 @@
-<div class="login-page">
-  <div class="login-box">
-    <div class="title-container">
-      <h2>Einloggen</h2>
-      <img src="assets/logo.jpg" alt="Logo" class="login-logo" />
+<div
+  class="login-page absolute top-0 left-0 h-screen w-screen bg-[url('/assets/login-bg.jpg')] bg-cover bg-center flex items-center justify-center"
+>
+  <div
+    class="login-box bg-[rgba(254,251,251,0.812)] p-6 rounded-2xl text-left w-[770px] h-auto backdrop-blur-md shadow-[0_4px_10px_rgba(0,0,0,0.2)]"
+  >
+    <div class="title-container flex items-center justify-between mb-4 mt-4">
+      <h2 class="text-3xl font-normal ml-8">Einloggen</h2>
+      <img
+        src="assets/logo.jpg"
+        alt="Logo"
+        class="login-logo w-[120px] h-auto"
+      />
     </div>
 
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <p *ngIf="showFormError" style="color: red; text-align: center">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      class="flex flex-col items-center"
+    >
+      <p *ngIf="showFormError" class="text-red-500 text-center">
         Bitte füllen Sie alle Felder aus!
       </p>
 
@@ -15,10 +27,11 @@
         name="email"
         placeholder="E-Mail"
         formControlName="email"
+        class="w-[95%] h-[55px] p-6 my-4 border-none outline-none bg-slate-50 text-lg rounded-md"
       />
       <p
         *ngIf="form.controls['email'].touched && form.controls['email'].invalid"
-        style="color: red"
+        class="text-red-500 text-center"
       >
         Bitte eine gültige E-Mail-Adresse eingeben!
       </p>
@@ -28,21 +41,29 @@
         name="password"
         placeholder="Passwort"
         formControlName="password"
+        class="w-[95%] h-[55px] p-6 my-4 border-none outline-none bg-slate-50 text-lg rounded-md"
       />
       <p
         *ngIf="
           form.controls['password'].touched && form.controls['password'].invalid
         "
-        style="color: red"
+        class="text-red-500 text-center"
       >
         Passwort muss zwischen 6 und 10 Zeichen lang sein!
       </p>
 
-      <div class="password-container">
-        <a href="#" class="password-link">Haben Sie Ihr Passwort vergessen?</a>
+      <div class="password-container text-right w-[90%] mt-2">
+        <a href="#" class="password-link text-black inline-block"
+          >Haben Sie Ihr Passwort vergessen?</a
+        >
       </div>
 
-      <button type="submit">Jetzt einloggen</button>
+      <button
+        type="submit"
+        class="w-[90%] mb-4 mt-6 py-5 bg-[#dd3333] text-white text-xl cursor-pointer border-none rounded-md hover:bg-[#d82537]"
+      >
+        Jetzt einloggen
+      </button>
     </form>
   </div>
 </div>

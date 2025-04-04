@@ -81,8 +81,8 @@
     padding-top: 10px;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .sidebar {
         display: none;
     }
-}
+} */

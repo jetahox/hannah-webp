@@ -1,24 +1,51 @@
-<div class="page-content">
+<div
+  class="page-content bg-contain bg-no-repeat p-5 rounded-lg text-left bg-right flex-grow bg-[#bbbbbb4d]"
+>
   <div class="text-container">
-    <h1>{{ welcomeTitle }}</h1>
-    <p>{{ welcomeText }}</p>
+    <h1 class="text-3xl text-slate-950 font-normal mt-0 mb-10">
+      {{ welcomeTitle }}
+    </h1>
+    <p class="text-sm">{{ welcomeText }}</p>
   </div>
 </div>
 
-<div class="info-container">
-  <div class="info-box" (click)="goToDetails()">
-    <h3>{{ trudoZ }}</h3>
-    <p>{{ trudoText }}</p>
-    <div class="icon-container">
-      <img src="/assets/phoneicon.png" alt="phone icon" />
+<div class="info-container flex justify-between gap-5 mt-5 px-1 cursor-pointer">
+  <div
+    class="info-box flex-1 pr-6 pl-4 pt-4 pb-4 border-1 border-solid border-[rgb(221,51,51)] rounded-2xl text-left relative cursor-pointer hover:bg-[#f2f2f2] shadow-[0_0_10px_#0000001a]"
+    (click)="goToDetails()"
+  >
+    <h3 class="mb-10 text-2xl leading-8 font-normal text-[rgb(221,51,51)]">
+      {{ trudoZ }}
+    </h3>
+    <p class="text-[#666] text-xl font-normal">{{ trudoText }}</p>
+    <div
+      class="icon-container absolute top-1/2 translate-y-[-50%] right-[15px] rounded-full p-2.5 border-2 border-solid border-[#424242] mr-2.5 flex items-center justify-center w-[70px] h-[70px]"
+    >
+      <img
+        class="w-[30px] h-[30px]"
+        src="/assets/phoneicon.png"
+        alt="phone icon"
+      />
     </div>
   </div>
 
-  <div class="info-box">
-    <h3>{{ hannahC }}</h3>
-    <p>Im moment kein alarm in Care Hannah-<br />Office</p>
-    <div class="icon-container">
-      <img src="/assets/phoneicon.png" alt="phone icon" />
+  <div
+    class="info-box flex-1 pr-6 pl-4 pt-4 pb-4 border-1 border-solid border-[rgb(221,51,51)] rounded-2xl text-left relative cursor-pointer hover:bg-[#f2f2f2] shadow-[0_0_10px_#0000001a]"
+  >
+    <h3 class="mb-10 text-2xl leading-8 font-normal text-[rgb(221,51,51)]">
+      {{ hannahC }}
+    </h3>
+    <p class="text-[#666] text-xl font-normal">
+      Im moment kein alarm in Care Hannah-<br />Office
+    </p>
+    <div
+      class="icon-container absolute top-1/2 translate-y-[-50%] right-[15px] rounded-full p-2.5 border-2 border-solid border-[#424242] mr-2.5 flex items-center justify-center w-[70px] h-[70px]"
+    >
+      <img
+        class="w-[30px] h-[30px]"
+        src="/assets/phoneicon.png"
+        alt="phone icon"
+      />
     </div>
   </div>
 </div>
