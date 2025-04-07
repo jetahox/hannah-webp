@@ -1,32 +1,89 @@
-<div class="sidebar">
-  <div class="logo-container" (click)="goToMain()">
-    <img src="assets/logo.jpg" alt="Logo" class="logo" />
+<div
+  class="w-[20%] h-screen bg-white text-[#97999a] pt-2.5 flex flex-col items-start fixed left-0 top-0 m-0 border-r border-[#e4e0e0] box-border"
+>
+  <div class="w-full text-left m-0 p-0 cursor-pointer" (click)="goToMain()">
+    <img src="assets/logo.jpg" alt="Logo" class="w-[130px] pl-3.5 pt-2.5" />
   </div>
-  <ul class="nav-list">
+
+  <ul class="list-none p-0 m-0 w-full pt-8">
     <li
+      class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
       routerLink="/main"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
     >
-      <i class="fas fa-home"></i> <a>Übersicht</a>
+      <i class="fas fa-home text-[20px] text-[#757575] pr-3 pl-2"></i>
+      <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
+        >Übersicht</a
+      >
     </li>
-    <li routerLink="/main/meine-daten" routerLinkActive="active">
-      <i class="fas fa-user"></i> <a>Meine Daten</a>
+
+    <li
+      class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
+      routerLink="/main/meine-daten"
+      routerLinkActive="active"
+    >
+      <i class="fas fa-user text-[20px] text-[#757575] pr-3 pl-2"></i>
+      <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
+        >Meine Daten</a
+      >
     </li>
-    <li routerLink="/kontakte" routerLinkActive="active">
-      <i class="fas fa-address-book"></i> <a>Kontakte verwalten</a>
+
+    <li
+      class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
+      routerLink="/kontakte"
+      routerLinkActive="active"
+    >
+      <i class="fas fa-address-book text-[20px] text-[#757575] pr-3 pl-2"></i>
+      <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
+        >Kontakte verwalten</a
+      >
     </li>
-    <li routerLink="/dokumente" routerLinkActive="active">
-      <i class="fas fa-file-alt"></i> <a>Dokumente</a>
+
+    <li
+      class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
+      routerLink="/dokumente"
+      routerLinkActive="active"
+    >
+      <i class="fas fa-file-alt text-[20px] text-[#757575] pr-3 pl-2"></i>
+      <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
+        >Dokumente</a
+      >
     </li>
-    <li routerLink="/hilfe" routerLinkActive="active">
-      <i class="fas fa-question-circle"></i> <a>Hilfe</a>
+
+    <li
+      class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
+      routerLink="/hilfe"
+      routerLinkActive="active"
+    >
+      <i
+        class="fas fa-question-circle text-[20px] text-[#757575] pr-3 pl-2"
+      ></i>
+      <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
+        >Hilfe</a
+      >
     </li>
-    <li routerLink="/datenschutz" routerLinkActive="active">
-      <i class="fas fa-shield-alt"></i> <a>Datenschutz</a>
+
+    <li
+      class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
+      routerLink="/datenschutz"
+      routerLinkActive="active"
+    >
+      <i class="fas fa-shield-alt text-[20px] text-[#757575] pr-3 pl-2"></i>
+      <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
+        >Datenschutz</a
+      >
     </li>
-    <li routerLink="/cookies" routerLinkActive="active">
-      <i class="fas fa-cookie-bite"></i> <a>Cookie Einstellungen</a>
+
+    <li
+      class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
+      routerLink="/cookies"
+      routerLinkActive="active"
+    >
+      <i class="fas fa-cookie-bite text-[20px] text-[#757575] pr-3 pl-2"></i>
+      <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
+        >Cookie Einstellungen</a
+      >
     </li>
   </ul>
 </div>
