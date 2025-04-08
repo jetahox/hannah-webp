@@ -3,6 +3,7 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -47,6 +48,7 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/main/details']);
   }
 
+  
   logout() {
     window.location.href = '/login';
   }
