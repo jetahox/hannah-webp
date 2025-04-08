@@ -12,3 +12,20 @@ li.active {
     color: white;
   }
   
+  @media (max-width: 1024px) {
+    .sidebar {
+      width: 30%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 50%; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 100%; 
+    }
+  }

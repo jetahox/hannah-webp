@@ -17,8 +17,9 @@
         >Übersicht</a
       >
     </li>
-    <!-- test -->
+    <!-- Alarm dropdown item -->
     <li
+      *ngIf="showAlarm"
       class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
       (click)="toggleDropdown()"
     >
@@ -30,20 +31,17 @@
     <ul class="list-none pl-8" *ngIf="showDropdown">
       <li class="py-[10px]">
         <a
-          (click)="navigateTo('/alarm/alarmhistorie')"
+          (click)="navigateTo('/alarm/alarmkette')"
           class="text-[#757575] text-[16px] cursor-pointer"
           >Alarmhistorie</a
         >
       </li>
-      <li class="py-[10px]">
-        <a
-          (click)="navigateTo('/alarm/alarmkette')"
-          class="text-[#757575] text-[16px] cursor-pointer"
-          >Alarmkette</a
-        >
+      <li class="py-[10px]" routerLink="/main/alarm/alarmkette">
+        <a class="text-[#757575] text-[16px] cursor-pointer">Alarmkette</a>
       </li>
     </ul>
-    <!-- test -->
+
+    <!-- End Alarm dropdown -->
 
     <li
       class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
