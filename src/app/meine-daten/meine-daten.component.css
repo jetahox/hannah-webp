@@ -71,3 +71,9 @@ input:focus {
   bottom: 10;
 
 }
+@media (max-width: 1280px) {
+  .page-content {
+    margin-left: 20%;  
+    padding: 15px;
+  }
+}

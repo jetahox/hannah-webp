@@ -11,3 +11,9 @@
     bottom: 10;
   
   }
+  @media (max-width: 1280px) {
+    .wrapper {
+      margin-left: 20%;  
+      padding: 15px;
+    }
+  }
