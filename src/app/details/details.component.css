@@ -1,3 +1,11 @@
+.page-content {
+  background-image: url('/assets/dashboard-image.png');
+  padding: 30px;
+  margin-left: 0px;
+  margin-right:0px;
+  position: relative;
+  z-index: 1; 
+}
 .footer-title {
     background-color: rgb(182, 183, 184);
     color: white;
