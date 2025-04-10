@@ -1,59 +1,84 @@
 .page-content {
-    background-image: url('/assets/dashboard-image.png');
+  background-image: url('/assets/dashboard-image.png');
+  padding: 30px;
+  margin-left: 0px;
+  margin-right:0px;
+  position: relative;
+  z-index: 1; 
 }
-@media (max-width: 1024px) {
-    .info-container {
-      flex-direction: column;
-      align-items: stretch;
-      padding-left: 0;
-    }
-  
-    .info-box {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .info-box .icon-container {
-      position: static;
-      margin-top: 1rem;
-      margin-left: auto;
-      margin-right: auto;
-      transform: none;
-    }
-  }
-  
 
-.footer-title {
-    background-color: rgb(182, 183, 184);
-    color: rgb(246, 245, 245);
-    padding: 20px;
-    text-align: left;
-    width: 80%;
-    right: 0;
-    font-size: 20px;
-    position: absolute;
-    bottom: 0;
-}
 @media (max-width: 1024px) {
-    .footer-title {
-      left: 0;
-      width: 100%;
-      justify-content: center;
-    }
+  .page-content {
+    margin-left: 20%;
+    padding: 15px;
   }
-  
-  @media (max-width: 768px) {
-    .footer-title {
-      left: 0;
-      width: 100%;
-      justify-content: center;
-    }
-  
-    .footer-title {
-      font-size: 1.3rem;
-      padding: 5px;
-    }
+
+  .info-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    gap: 10px;
   }
+
+  .info-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    margin-left: 20%;
+    padding: 10px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .info-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content {
+    margin-left: 20%;
+    padding: 5px;
+  }
+
+  .info-container {
+    padding: 5px;
+    gap: 6px;
+  }
+
+  .info-box {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+}
+.footer-title {
+  background-color: rgb(182, 183, 184);
+  color: rgb(246, 245, 245);
+  padding: 20px;
+  text-align: left;
+  width: 80%;
+  right: 0;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+}
+

@@ -4,7 +4,7 @@ import { MainComponent } from './main/main.component';
 import { MeineDatenComponent } from './meine-daten/meine-daten.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { DetailsComponent } from './details/details.component';
-
+import { AlarmketteComponent } from './alarm/alarmkette/alarmkette.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,7 +15,8 @@ export const routes: Routes = [
     children: [
       { path: '', pathMatch: 'full', component: MainContentComponent }, 
       { path: 'meine-daten', component: MeineDatenComponent },
-      { path: 'details', component: DetailsComponent }
+      { path: 'details', component: DetailsComponent },
+      { path: 'alarm/alarmkette', component: AlarmketteComponent },
     ]
   }
 ];

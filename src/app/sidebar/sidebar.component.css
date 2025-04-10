@@ -12,3 +12,10 @@ li.active {
     color: white;
   }
   
+  @media (max-width: 1024px) {
+    .sidebar {
+      width: 40%;
+    }
+  }
+  
+
