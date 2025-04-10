@@ -21,10 +21,10 @@
   }
 
   .info-box {
-    width: 100%;
-    margin-left: 0;
+    width: 80%;
+    margin-left: 20%;
     margin-right: 0;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
   }
 }
@@ -32,7 +32,7 @@
 @media (max-width: 768px) {
   .page-content {
     margin-left: 20%;
-    padding: 10px;
+    padding: 20px;
   }
 
   .info-container {
@@ -43,10 +43,10 @@
   }
 
   .info-box {
-    width: 100%;
-    margin-left: 0;
+    width: 80%;
+    margin-left: 20%;
     margin-right: 0;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
   }
 }
@@ -63,8 +63,8 @@
   }
 
   .info-box {
-    width: 100%;
-    margin-left: 0;
+    width: 80%;
+    margin-left: 20%;
     margin-right: 0;
     padding: 4px;
     box-sizing: border-box;
