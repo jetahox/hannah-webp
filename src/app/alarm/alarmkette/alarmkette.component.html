@@ -16,19 +16,29 @@
   </div>
   <div class="pt-6">
     <fieldset
-      class="w-[49%] border px-4 rounded-sm border-[#757575] p-[8px] text-[#757575]"
+      class="alarm-card w-[49%] border px-4 rounded-sm border-[#757575] p-[8px] text-[#757575]"
     >
       <legend class="text-xs text-[#757575]">Alarmschleifen</legend>
-      <p class="pt-[1px] pr-0 pb-[6px] pl-[2px]">
+      <p
+        class="pt-[1px] pr-0 pb-[6px] pl-[2px] flex justify-between items-center"
+      >
         Alarm durchläuft die Alarmkette 1 Mal.
+        <i class="fas fa-chevron-down text-[13px]"></i>
       </p>
     </fieldset>
   </div>
   <div class="card-divs flex justify-between gap-6 mt-6 mb-8">
-    <!-- First card -->
-    <div class="card w-1/2">
-      <h1 class="text-[22px] mb-10">Alarmkette</h1>
-      <div class="flex items-center justify-between gap-3 ml-4 mb-6">
+    <div class="card w-1/2 first-card">
+      <div class="flex justify-between items-center mb-4">
+        <div class="title font-normal text-[22px]">Alarmkette</div>
+        <div
+          class="bg-white border-2 border-[rgb(193,47,47)] rounded-full w-6 h-6 flex items-center justify-center"
+        >
+          <i class="fas fa-question text-[rgb(193,47,47)] text-sm"></i>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between gap-3 ml-4 mb-6 mt-10">
         <div class="flex items-center gap-3">
           <img
             src="/assets/avatar1.png"
@@ -37,7 +47,7 @@
           />
           <p class="text-[#757575] text-sm ml-4">Trudo Qa</p>
         </div>
-        <i class="fas fa-grip-lines text-gray-500 cursor-move mr-6"></i>
+        <i class="fas fa-arrows-alt text-gray-500 mr-6 text-xl"></i>
       </div>
 
       <hr class="my-2 border-gray-300" />
@@ -51,12 +61,12 @@
           />
           <p class="text-[#757575] text-sm ml-4">Ylber Pllana</p>
         </div>
-        <i class="fas fa-grip-lines text-gray-500 cursor-move mr-6"></i>
+        <i class="fas fa-arrows-alt text-gray-500 mr-6 text-xl"></i>
       </div>
       <hr class="my-2 border-gray-300" />
     </div>
-    <!-- End of first card -->
-    <div class="card w-1/2">
+
+    <div class="card w-1/2 second-card">
       <h1 class="text-[22px]">Angelegte Notfallkontakte</h1>
       <div class="flex items-center justify-between gap-3 mt-10 mb-6 ml-4">
         <div class="flex items-center gap-3">
@@ -67,7 +77,7 @@
           />
           <p class="text-[#757575] text-sm ml-4">Trudo</p>
         </div>
-        <i class="fas fa-grip-lines text-gray-500 cursor-move mr-6"></i>
+        <i class="fas fa-arrows-alt text-gray-500 mr-6 text-xl"></i>
       </div>
       <hr class="my-2 border-gray-300" />
     </div>

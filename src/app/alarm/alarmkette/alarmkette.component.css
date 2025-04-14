@@ -1,9 +1,47 @@
-@media (max-width: 1280px) {
-    .page-content {
-      margin-left: 20%;  
-      padding: 15px;
-    }
+@media (max-width: 1300px) and (min-width: 1000px) {
+  .page-content {
+    margin-left: 25%;
+    padding: 15px;
   }
+  .footer .footer-title {
+    width: 75%;
+    margin-left:25%;
+    bottom: 0;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .page-content {
+    margin: auto;
+    padding: auto;
+
+  }
+  .alarm-card{
+    width: 100%;
+  }
+  .card-divs {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    gap: 10px;
+  }
+  .first-card {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .second-card {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .footer .footer-title {
+    width: 100%;
+    margin-left:0%;
+    margin-top: 0px;
+  }
+}
   .footer-title {
     background-color: rgb(182, 183, 184);
     color: white;
@@ -17,3 +55,4 @@
     bottom: 10;
   
   }
+  
