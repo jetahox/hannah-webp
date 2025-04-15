@@ -1,4 +1,4 @@
-li.active {
+ /* li.active {
     background-color: rgb(221, 51, 51);
     color: white;
     border-bottom-right-radius: 20px;
@@ -6,16 +6,41 @@ li.active {
     width: 90%;
     height: 50px;
   }
+  li:hover{
+    background-color: rgb(240, 239, 239);
+    cursor: pointer;
+
+  }
+  .alarm-list:hover{
+    background-color: rgb(240, 239, 239);
+    padding-bottom: 10px;
+
+  } 
+  li.active:hover{
+    background-color: rgb(221, 51, 51);
+  }
   
   li.active i,
   li.active a {
     color: white;
   }
   
-  @media (max-width: 1024px) {
+  @media (max-width: 1220px) {
     .sidebar {
-      width: 40%;
+      width: 20%;
     }
   }
+  @media (max-width:1000px){
+    .sidebar{
+      display: none;
+    }
+  }
+  @media (max-width: 1300px) {
+    .sidebar {
+      width: 25%;
+    }
+  }
+
   
 
+ */

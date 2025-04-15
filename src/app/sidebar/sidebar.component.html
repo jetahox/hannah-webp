@@ -1,7 +1,10 @@
 <div
-  class="w-[20%] h-screen bg-white text-[#97999a] pt-2.5 flex flex-col items-start fixed left-0 top-0 m-0 border-r border-[#e4e0e0] box-border"
+  class="sidebar w-[20%] h-screen bg-white text-[#97999a] pt-2.5 flex flex-col items-start fixed left-0 top-0 m-0 border-r border-[#e4e0e0] box-border"
 >
-  <div class="w-full text-left m-0 p-0 cursor-pointer" (click)="goToMain()">
+  <div
+    class="w-full text-left mt-2 ml-2 p-0 cursor-pointer"
+    (click)="goToMain()"
+  >
     <img src="assets/logo.jpg" alt="Logo" class="w-[130px] pl-3.5 pt-2.5" />
   </div>
 
@@ -17,27 +20,36 @@
         >Übersicht</a
       >
     </li>
-    <!-- Alarm dropdown item -->
-    <li
-      *ngIf="showAlarm"
-      class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
-      (click)="toggleDropdown()"
-    >
-      <i class="fas fa-clock text-[20px] text-[#757575] pr-3 pl-2"></i>
-      <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
-        >Alarm</a
-      >
-    </li>
-    <ul class="list-none pl-8" *ngIf="showDropdown">
-      <li class="py-[10px]">
-        <a class="text-[#757575] text-[16px] cursor-pointer">Alarmhistorie</a>
-      </li>
-      <li class="py-[10px]" routerLink="/main/alarm/alarmkette">
-        <a class="text-[#757575] text-[16px] cursor-pointer">Alarmkette</a>
-      </li>
-    </ul>
 
-    <!-- End Alarm dropdown -->
+    <div class="alarm-list">
+      <li
+        *ngIf="showAlarm"
+        class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"
+        (click)="toggleDropdown()"
+      >
+        <i class="fas fa-clock text-[20px] text-[#757575] pr-3 pl-2"></i>
+        <a class="text-[#757575] text-[18px] whitespace-nowrap cursor-pointer"
+          >Alarm</a
+        >
+        <i class="fas fa-chevron-down text-[13px] ml-auto"></i>
+      </li>
+      <ul class="list-none pl-8" *ngIf="showDropdown">
+        <li class="py-[10px]">
+          <a class="text-[#757575] text-[16px] cursor-pointer ml-6"
+            >Alarmhistorie</a
+          >
+        </li>
+        <li
+          class="py-[10px]"
+          routerLink="/main/alarm/alarmkette"
+          routerLinkActive="active"
+        >
+          <a class="text-[#757575] text-[16px] cursor-pointer ml-6"
+            >Alarmkette</a
+          >
+        </li>
+      </ul>
+    </div>
 
     <li
       class="flex items-center py-[15px] px-4 w-full box-border rounded-none overflow-hidden"

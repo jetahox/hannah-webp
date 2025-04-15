@@ -1,9 +1,98 @@
-@media (max-width: 1280px) {
-    .page-content {
-      margin-left: 20%;  
-      padding: 15px;
-    }
+.drop-hover {
+  background-color: #f0f0f0;
+  border: none;
+}
+.username-box {
+  padding: 10px;
+
+}
+.username-box:hover {
+  background-color: rgb(235, 237, 237);
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 50px;
+  width: 500px;
+  height: 250px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  font-weight:400;
+  font-size: 1.875rem;
+  margin-bottom: 10px;
+}
+.modal-body {
+  margin-bottom:30px;
+  color:rgb(116, 116, 116)
+}
+
+
+button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 1300px) and (min-width: 1000px) {
+  .page-content {
+    margin-left: 25%;
+    padding: 15px;
   }
+  .footer .footer-title {
+    width: 75%;
+    margin-left:25%;
+    bottom: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .page-content {
+    margin: auto;
+    padding: auto;
+
+  }
+
+  .card-divs {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+  .first-card {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .second-card {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .footer .footer-title {
+    width: 100%;
+    margin-left:0%;
+    margin-top: 0px;
+  }
+}
   .footer-title {
     background-color: rgb(182, 183, 184);
     color: white;
@@ -17,3 +106,4 @@
     bottom: 10;
   
   }
+  
