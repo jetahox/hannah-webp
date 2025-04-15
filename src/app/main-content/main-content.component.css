@@ -54,6 +54,12 @@
     margin-left:0px;
   }
 }
+@media (max-width: 600px) {
+  .info-box p {
+    padding-right: 90px; 
+
+  }
+}
 .footer-title {
   background-color: rgb(182, 183, 184);
   color: rgb(246, 245, 245);
