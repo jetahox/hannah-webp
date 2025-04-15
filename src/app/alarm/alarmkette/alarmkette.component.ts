@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { NgClass } from '@angular/common';
+import { NgIf } from '@angular/common';
 import {
   CdkDragDrop,
   moveItemInArray,
@@ -12,7 +13,7 @@ import {
 @Component({
   selector: 'app-alarmkette',
   standalone: true,
-  imports: [CdkDropList, CdkDrag, DragDropModule],
+  imports: [CdkDropList, CdkDrag, DragDropModule,NgClass,NgIf],
   templateUrl: './alarmkette.component.html',
   styleUrl: './alarmkette.component.css',
 })
@@ -25,11 +26,21 @@ export class AlarmketteComponent {
   done = [
     { name: 'Trudo', avatar: '/assets/avatar2.png' }
   ];
-  
 
-  drop(event: CdkDragDrop<any[]>) {
-    // moving inside the todolist
-    if (event.previousContainer === event.container) {
+  showModal = false;
+  itemToMove: any=null;
+  originalContainer: any [] = [];
+
+  drop(event:CdkDragDrop<any[]>){
+    // Reset the hover states
+    this.isHoveringOverDoneList=false;
+    this.isHoveringOverTodoList=false;
+
+    this.showModal = true;
+    this.itemToMove = event.item.data;
+    this.originalContainer = event.previousContainer.data; 
+     // moving inside the todolist
+     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data, 
         event.previousIndex, 
@@ -46,5 +57,33 @@ export class AlarmketteComponent {
       );
     }
   }
+  isHoveringOverDoneList = false;
+  onEnterDoneList(){
+    this.isHoveringOverDoneList = true;
+  }
+  onExitDoneList(){
+    this.isHoveringOverDoneList = false;
+  }
+  isHoveringOverTodoList = false;
+
+  onEnterTodoList() {
+    this.isHoveringOverTodoList = true;
+  }
   
-}
+  onExitTodoList() {
+    this.isHoveringOverTodoList = false;
+  }
+  confirmTransfer(confirmed: boolean) {
+    if (confirmed) {
+    } else {
+      
+      const index = this.originalContainer.findIndex(item => item === this.itemToMove);
+      if (index !== -1) {
+        this.originalContainer.splice(index, 0, this.itemToMove);
+      }
+    }
+    this.showModal = false; 
+    this.itemToMove = null; 
+  }
+  }
+

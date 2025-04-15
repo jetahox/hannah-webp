@@ -1,4 +1,21 @@
 <div class="page-content p-2">
+  <div *ngIf="showModal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">Bitte bestätigen</div>
+      <div class="modal-body">sicher?</div>
+      <div class="modal-footer gap-2 flex justify-betwen">
+        <button class="w-1/2 bg-stone-400" (click)="confirmTransfer(false)">
+          Nein
+        </button>
+        <button
+          class="w-1/2 bg-[rgb(221,51,51)]"
+          (click)="confirmTransfer(true)"
+        >
+          Ja
+        </button>
+      </div>
+    </div>
+  </div>
   <div class="title font-normal text-4xl mb-4">Alarmkette</div>
   <div>
     <span class="text-[rgb(221,51,51)]">Ubersicht</span> >
@@ -43,11 +60,17 @@
         #todoList="cdkDropList"
         [cdkDropListData]="todo"
         [cdkDropListConnectedTo]="[doneList]"
-        class="flex flex-col gap-6 min-h-[100px] border-none p-4"
+        [ngClass]="{ 'drop-hover': isHoveringOverTodoList }"
+        class="flex flex-col gap-6 min-h-[100px] border-none p-4 transition-all"
         (cdkDropListDropped)="drop($event)"
+        (cdkDropListEntered)="onEnterTodoList()"
+        (cdkDropListExited)="onExitTodoList()"
       >
         @for (item of todo; track item) {
-          <div class="flex items-center justify-between gap-3 ml-4" cdkDrag>
+          <div
+            class="username-box flex items-center justify-between gap-3 ml-4"
+            cdkDrag
+          >
             <div class="flex items-center gap-3">
               <img
                 [src]="item.avatar"
@@ -73,11 +96,17 @@
         #doneList="cdkDropList"
         [cdkDropListData]="done"
         [cdkDropListConnectedTo]="[todoList]"
-        class="flex flex-col gap-6 min-h-[100px] border-none p-4"
+        [ngClass]="{ 'drop-hover': isHoveringOverDoneList }"
+        class="flex flex-col gap-6 min-h-[50px] border-none p-2 transition-all"
         (cdkDropListDropped)="drop($event)"
+        (cdkDropListEntered)="onEnterDoneList()"
+        (cdkDropListExited)="onExitDoneList()"
       >
         @for (item of done; track item) {
-          <div class="flex items-center justify-between gap-3 ml-4" cdkDrag>
+          <div
+            class="username-box flex items-center justify-between gap-3 ml-4"
+            cdkDrag
+          >
             <div class="flex items-center gap-3">
               <img
                 [src]="item.avatar"
