@@ -9,6 +9,11 @@ import {
   DragDropModule
 } from '@angular/cdk/drag-drop';
 
+interface Person {
+  name: string;
+  avatar: string;
+}
+
 @Component({
   selector: 'app-alarmkette',
   standalone: true,
@@ -17,26 +22,26 @@ import {
   styleUrl: './alarmkette.component.css',
 })
 export class AlarmketteComponent {
-  todo = [
+  todo: Person[] = [
     { name: 'Trudo Qa', avatar: '/assets/avatar1.png' },
     { name: 'Ylber Pllana', avatar: '/assets/avatar2.png' }
   ];
 
-  done = [
+  done: Person[] = [
     { name: 'Trudo', avatar: '/assets/avatar2.png' }
   ];
 
-  showModal = false;
-  itemToMove: any = null;
-  originalContainer: any[] = [];
-  targetContainer: any[] = [];
+  showModal: boolean = false;
+  itemToMove: Person | null = null;
+  originalContainer: Person[] = [];
+  targetContainer: Person[] = [];
   originalIndex: number = -1;
   targetIndex: number = -1;
 
-  isHoveringOverDoneList = false;
-  isHoveringOverTodoList = false;
+  isHoveringOverDoneList: boolean = false;
+  isHoveringOverTodoList: boolean = false;
 
-  drop(event: CdkDragDrop<any[]>) {
+  drop(event: CdkDragDrop<Person[]>) {
     this.isHoveringOverDoneList = false;
     this.isHoveringOverTodoList = false;
 
@@ -61,23 +66,23 @@ export class AlarmketteComponent {
     this.showModal = true;
   }
 
-  onEnterDoneList() {
+  onEnterDoneList(): void {
     this.isHoveringOverDoneList = true;
   }
 
-  onExitDoneList() {
+  onExitDoneList(): void {
     this.isHoveringOverDoneList = false;
   }
 
-  onEnterTodoList() {
+  onEnterTodoList(): void {
     this.isHoveringOverTodoList = true;
   }
 
-  onExitTodoList() {
+  onExitTodoList(): void {
     this.isHoveringOverTodoList = false;
   }
 
-  confirmTransfer(confirmed: boolean) {
+  confirmTransfer(confirmed: boolean): void {
     if (!confirmed && this.itemToMove && this.originalContainer && this.targetContainer) {
       const removedIndex = this.targetContainer.findIndex(item => item === this.itemToMove);
       if (removedIndex !== -1) {
