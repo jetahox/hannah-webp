@@ -38,6 +38,8 @@ export class SidebarComponent {
 
   navigateTo(path: string) {
     this.router.navigate([path]);
-  }}
+  }
+
+}
 
 
