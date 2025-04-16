@@ -24,7 +24,7 @@ export class SidebarComponent implements OnInit {
         const url = event.url;
 
         // Show Alarm 
-        if (url.includes('details') || url.includes('alarmkette')) {
+        if (url.includes('details') || url.includes('alarmkette') || url.includes('calendar')) {
           this.showAlarm = true;
         } else {
           this.showAlarm = false;
@@ -32,7 +32,7 @@ export class SidebarComponent implements OnInit {
         }
 
         // Show Calendar
-        if (url.includes('details') || url.includes('calendar')) {
+        if (url.includes('details') || url.includes('calendar') || url.includes('alarmkette')) {
           this.showCalendar = true;
         } else {
           this.showCalendar = false;
