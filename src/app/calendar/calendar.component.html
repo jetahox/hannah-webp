@@ -5,13 +5,134 @@
     <span class="text-[rgb(117,117,117)]">Calendar</span>
   </div>
 
-  <div class="max-w-6xl mx-auto border border-gray-300">
+  <div>
+    <button
+      (click)="openPopup()"
+      class="block absolute top-40 right-5 px-8 py-3.5 bg-[rgb(221,51,51)] text-white rounded-xl text-base cursor-pointer z-10"
+    >
+      Neuen Termin erstellen
+    </button>
+  </div>
+
+  <div class="max-w-6xl mx-auto border border-gray-300 relative">
     <full-calendar [options]="calendarOptions"></full-calendar>
   </div>
-</div>
 
-<footer class="footer mt-12">
-  <div class="footer-title text-center text-sm text-gray-500">
-    © 2025 hannah&swenn. Alle Rechte vorbehalten.
+  <div
+    *ngIf="showPopup"
+    class="fixed inset-0 bg-black/30 flex justify-center items-center z-20"
+  >
+    <div class="relative bg-white px-10 py-6 w-[70%] max-w-full rounded-md">
+      <h1 class="text-2xl mb-4">Neuen Termin erstellen</h1>
+
+      <form (ngSubmit)="saveEvent()">
+        <div class="mb-4">
+          <label for="title" class="block text-sm font-normal">Titel*</label>
+          <input
+            id="title"
+            type="text"
+            [(ngModel)]="eventData.title"
+            name="title"
+            required
+            class="w-full border-b border-gray-400 py-2 mt-1 outline-none"
+          />
+        </div>
+
+        <div class="mb-6">
+          <label for="description" class="block text-sm font-normal"
+            >Beschreibung*</label
+          >
+          <input
+            id="description"
+            type="text"
+            [(ngModel)]="eventData.description"
+            name="description"
+            required
+            class="w-full border-b border-gray-400 py-2 mt-1 outline-none"
+          />
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 mb-6">
+          <div>
+            <label for="startDate" class="block text-sm font-normal"
+              >Starttermin*</label
+            >
+            <input
+              id="startDate"
+              type="date"
+              [(ngModel)]="eventData.startDate"
+              name="startDate"
+              required
+              class="w-full border-b border-gray-400 py-2 mt-1 outline-none"
+            />
+          </div>
+          <div>
+            <label for="endDate" class="block text-sm font-normal"
+              >Endtermin*</label
+            >
+            <input
+              id="endDate"
+              type="date"
+              [(ngModel)]="eventData.endDate"
+              name="endDate"
+              required
+              class="w-full border-b border-gray-400 py-2 mt-1 outline-none"
+            />
+          </div>
+          <div>
+            <label for="status" class="block text-sm font-normal"
+              >Status*</label
+            >
+            <select
+              id="status"
+              [(ngModel)]="eventData.status"
+              name="status"
+              required
+              class="w-full border-b border-gray-400 py-2 mt-1 outline-none bg-white"
+            >
+              <option value="Abwesend">Abwesend</option>
+              <option value="Zuhause">Zuhause</option>
+            </select>
+          </div>
+          <div>
+            <label for="recurring" class="block text-sm font-normal"
+              >Wiederkehrend*</label
+            >
+            <select
+              id="recurring"
+              [(ngModel)]="eventData.recurring"
+              name="recurring"
+              required
+              class="w-full border-b border-gray-400 py-2 mt-1 outline-none bg-white"
+            >
+              <option value="nein">nein</option>
+              <option value="ja">ja</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <button
+            type="submit"
+            class="bg-red-500 text-white px-6 py-2 rounded-md"
+          >
+            Termin Speichern
+          </button>
+        </div>
+      </form>
+
+      <button
+        (click)="closePopup()"
+        class="absolute top-3 right-3 text-2xl text-gray-500 hover:text-black"
+      >
+        x
+      </button>
+    </div>
   </div>
-</footer>
+
+  <footer class="footer">
+    <div class="footer-title">
+      © 2025 hannah&swenn. Alle Rechte vorbehalten.
+    </div>
+  </footer>
+</div>
