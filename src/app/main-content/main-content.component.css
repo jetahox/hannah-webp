@@ -31,7 +31,12 @@
     margin-left:25%;
   }
 } 
+@media (max-width: 600px) {
+  .info-box p {
+    padding-right: 90px; 
 
+  }
+}
 
 @media (max-width: 1000px) {
   .page-content {
@@ -52,12 +57,6 @@
   .footer .footer-title {
     width: 100%;
     margin-left:0px;
-  }
-}
-@media (max-width: 600px) {
-  .info-box p {
-    padding-right: 90px; 
-
   }
 }
 .footer-title {

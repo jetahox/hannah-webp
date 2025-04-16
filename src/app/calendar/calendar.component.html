@@ -1,5 +1,17 @@
-<div class="page-content p-2"></div>
+<div class="page-content py-8 px-4">
+  <div class="title font-normal text-4xl mb-6">Calendar</div>
+  <div class="pb-6">
+    <span class="text-[rgb(221,51,51)]">Ubersicht</span> >
+    <span class="text-[rgb(117,117,117)]">Calendar</span>
+  </div>
 
-<footer class="footer">
-  <div class="footer-title">© 2025 hannah&swenn. Alle Rechte vorbehalten.</div>
+  <div class="max-w-6xl mx-auto border border-gray-300">
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+</div>
+
+<footer class="footer mt-12">
+  <div class="footer-title text-center text-sm text-gray-500">
+    © 2025 hannah&swenn. Alle Rechte vorbehalten.
+  </div>
 </footer>

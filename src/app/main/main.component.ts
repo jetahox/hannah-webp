@@ -11,9 +11,6 @@ import { HilfeComponent } from '../hilfe/hilfe.component';
   imports: [
     SidebarComponent,
     HeaderComponent,
-    MainContentComponent,
-    MeineDatenComponent,
-    HilfeComponent,
     RouterModule 
   ],
   templateUrl: './main.component.html',
