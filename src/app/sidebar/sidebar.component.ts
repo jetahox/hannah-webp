@@ -11,24 +11,37 @@ import { NavigationEnd } from '@angular/router';
   styleUrl: './sidebar.component.css',
   imports:[RouterModule, NgIf ],
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
   constructor(private router: Router) {}
+
   showDropdown = false;
   showAlarm = false;
+  showCalendar = false;
 
-   ngOnInit(): void {
+  ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        if (event.url.includes('details') || event.url.includes('alarmkette')) {
+        const url = event.url;
+
+        // Show Alarm 
+        if (url.includes('details') || url.includes('alarmkette')) {
           this.showAlarm = true;
         } else {
           this.showAlarm = false;
           this.showDropdown = false;
         }
+
+        // Show Calendar
+        if (url.includes('details') || url.includes('calendar')) {
+          this.showCalendar = true;
+        } else {
+          this.showCalendar = false;
+        }
       }
     });
-
   }
+
+
   goToMain() {
     this.router.navigate(['/main']);
   }
