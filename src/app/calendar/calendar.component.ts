@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import interactionPlugin from '@fullcalendar/interaction';
 
-
 @Component({
   selector: 'app-calendar',
   standalone: true,
@@ -22,12 +21,10 @@ export class CalendarComponent implements AfterViewInit {
     initialView: 'dayGridMonth',
     locale: 'de',
     dayHeaderFormat: { weekday: 'long' },
-
     events: [
       { title: 'Event 1', date: '2025-04-17' },
       { title: 'Event 2', date: '2025-04-22' },
     ],
-
     headerToolbar: {
       left: 'prev,next title',
       center: '',
@@ -37,6 +34,7 @@ export class CalendarComponent implements AfterViewInit {
   };
 
   showPopup: boolean = false;
+  selectedOption: string | null = null;
 
   eventData = {
     title: '',
@@ -45,6 +43,9 @@ export class CalendarComponent implements AfterViewInit {
     endDate: '',
     status: 'Abwesend',
     recurring: 'nein',
+    frequency: 'Daily',
+    amTime: '',
+    endTime: ''
   };
 
   ngAfterViewInit() {}
@@ -55,6 +56,8 @@ export class CalendarComponent implements AfterViewInit {
 
   closePopup() {
     this.showPopup = false;
+    this.selectedOption = null;
+    this.resetEventData();
   }
 
   saveEvent() {
@@ -78,5 +81,22 @@ export class CalendarComponent implements AfterViewInit {
     this.eventData.endDate = arg.dateStr;
     this.openPopup();
   }
-  
+
+  selectOption(option: string) {
+    this.selectedOption = option;
+  }
+
+  resetEventData() {
+    this.eventData = {
+      title: '',
+      description: '',
+      startDate: '',
+      endDate: '',
+      status: 'Abwesend',
+      recurring: 'nein',
+      frequency: 'Daily',
+      amTime: '',
+      endTime: ''
+    };
+  }
 }
