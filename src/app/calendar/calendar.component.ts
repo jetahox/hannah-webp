@@ -16,23 +16,6 @@ import interactionPlugin from '@fullcalendar/interaction';
 export class CalendarComponent implements AfterViewInit {
   @ViewChild(FullCalendarComponent) fullCalendar: FullCalendarComponent | undefined;
 
-  calendarOptions: CalendarOptions = {
-    plugins: [dayGridPlugin, interactionPlugin],
-    initialView: 'dayGridMonth',
-    locale: 'de',
-    dayHeaderFormat: { weekday: 'long' },
-    events: [
-      { title: 'Event 1', date: '2025-04-17' },
-      { title: 'Event 2', date: '2025-04-22' },
-    ],
-    headerToolbar: {
-      left: 'prev,next title',
-      center: '',
-      right: '',
-    },
-    dateClick: this.handleDateClick.bind(this),
-  };
-
   showPopup: boolean = false;
   selectedOption: string | null = null;
 
@@ -46,6 +29,21 @@ export class CalendarComponent implements AfterViewInit {
     frequency: 'Daily',
     amTime: '',
     endTime: ''
+  };
+
+  calendarOptions: CalendarOptions = {
+    plugins: [dayGridPlugin, interactionPlugin],
+    initialView: 'dayGridMonth',
+    locale: 'de',
+    dayHeaderFormat: { weekday: 'long' },
+    events: [],
+    headerToolbar: {
+      left: 'prev,next title',
+      center: '',
+      right: '',
+    },
+    dateClick: this.handleDateClick.bind(this),
+    eventClick: this.handleEventClick.bind(this)
   };
 
   ngAfterViewInit() {}
@@ -67,9 +65,14 @@ export class CalendarComponent implements AfterViewInit {
         title: this.eventData.title,
         start: this.eventData.startDate,
         end: this.eventData.endDate,
-        description: this.eventData.description,
-        status: this.eventData.status,
-        recurring: this.eventData.recurring,
+        extendedProps: {
+          description: this.eventData.description,
+          status: this.eventData.status,
+          recurring: this.eventData.recurring,
+          frequency: this.eventData.frequency,
+          amTime: this.eventData.amTime,
+          endTime: this.eventData.endTime
+        }
       };
       calendarApi.addEvent(newEvent);
       this.showPopup = false;
@@ -79,6 +82,24 @@ export class CalendarComponent implements AfterViewInit {
   handleDateClick(arg: any) {
     this.eventData.startDate = arg.dateStr;
     this.eventData.endDate = arg.dateStr;
+    this.openPopup();
+  }
+
+  handleEventClick(arg: any) {
+    const event = arg.event;
+
+    this.eventData = {
+      title: event.title || '',
+      description: event.extendedProps.description || '',
+      startDate: event.startStr || '',
+      endDate: event.endStr || event.startStr || '',
+      status: event.extendedProps.status || 'Abwesend',
+      recurring: event.extendedProps.recurring || 'nein',
+      frequency: event.extendedProps.frequency || 'Daily',
+      amTime: event.extendedProps.amTime || '',
+      endTime: event.extendedProps.endTime || ''
+    };
+
     this.openPopup();
   }
 
