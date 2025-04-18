@@ -82,20 +82,28 @@
   ::ng-deep .fc-toolbar-title {
     display: inline-block;
     margin-left: 8px;
-    font-size: 1.2rem;
-    color: #555;
-    font-weight: normal;
+    color: #6a6a6a;
+    font-weight:400;
+    padding: 0 !important;
+    margin: 0 !important; 
+    line-height: 1.2rem !important; 
   }
   
   ::ng-deep .fc-header-toolbar {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
-  ::ng-deep .fc-toolbar-title {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
+    margin-bottom: 0 !important;
+    padding-top: 5px;
+    padding-bottom:5px;
 
+   }
+  
+  ::ng-deep .fc-col-header-cell {
+    text-align: left !important;
+  }
+  
+  ::ng-deep .fc-col-header-cell-cushion {
+    color: #6a6a6a !important;
+    font-size: 1rem;
+    text-align: left !important;
+    display: block;
+  }
   

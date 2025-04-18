@@ -1,10 +1,11 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { FullCalendarModule } from '@fullcalendar/angular';
+import { FullCalendarModule, FullCalendarComponent } from '@fullcalendar/angular';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import { CommonModule } from '@angular/common';
-import { FullCalendarComponent } from '@fullcalendar/angular';
 import { FormsModule } from '@angular/forms';
+import interactionPlugin from '@fullcalendar/interaction';
+
 
 @Component({
   selector: 'app-calendar',
@@ -17,21 +18,26 @@ export class CalendarComponent implements AfterViewInit {
   @ViewChild(FullCalendarComponent) fullCalendar: FullCalendarComponent | undefined;
 
   calendarOptions: CalendarOptions = {
-    plugins: [dayGridPlugin],
+    plugins: [dayGridPlugin, interactionPlugin],
     initialView: 'dayGridMonth',
     locale: 'de',
+    dayHeaderFormat: { weekday: 'long' },
+
     events: [
       { title: 'Event 1', date: '2025-04-17' },
       { title: 'Event 2', date: '2025-04-22' },
     ],
+
     headerToolbar: {
       left: 'prev,next title',
       center: '',
       right: '',
     },
+    dateClick: this.handleDateClick.bind(this),
   };
 
   showPopup: boolean = false;
+
   eventData = {
     title: '',
     description: '',
@@ -66,5 +72,11 @@ export class CalendarComponent implements AfterViewInit {
       this.showPopup = false;
     }
   }
-}
 
+  handleDateClick(arg: any) {
+    this.eventData.startDate = arg.dateStr;
+    this.eventData.endDate = arg.dateStr;
+    this.openPopup();
+  }
+  
+}
