@@ -5,7 +5,7 @@
     <span class="text-[rgb(117,117,117)]">Calendar</span>
   </div>
 
-  <div>
+  <div *ngIf="!isEdit">
     <button
       (click)="openPopup()"
       class="block absolute top-40 right-5 px-8 py-3.5 bg-[rgb(221,51,51)] text-white rounded-xl text-base cursor-pointer z-10"
@@ -23,7 +23,9 @@
     class="fixed inset-0 bg-black/30 flex justify-center items-center z-20"
   >
     <div class="relative bg-white px-10 py-6 w-[70%] max-w-full rounded-md">
-      <h1 class="text-2xl mb-4">Neuen Termin erstellen</h1>
+      <h1 class="text-2xl mb-4">
+        {{ isEdit ? "Termin bearbeiten" : "Neuen Termin erstellen" }}
+      </h1>
 
       <form (ngSubmit)="saveEvent()">
         <div class="mb-4">
@@ -137,9 +139,7 @@
               >
                 <div
                   class="w-4 h-4 border-2 border-[rgb(221,51,51)] rounded-full p-2"
-                  [ngClass]="{
-                    'bg-[rgb(221,51,51)]': selectedOption === 'Am',
-                  }"
+                  [ngClass]="{ 'bg-[rgb(221,51,51)]': selectedOption === 'Am' }"
                 ></div>
                 <span class="text-md pb-3">Am</span>
               </div>
@@ -179,6 +179,7 @@
 
         <div class="mt-4">
           <button
+            *ngIf="!isEdit"
             type="submit"
             class="bg-[rgb(255,102,102)] text-white px-6 py-3 mt-9 rounded-2xl cursor-pointer hover:bg-[rgb(221,51,51)] transition duration-300"
           >
@@ -187,12 +188,22 @@
         </div>
       </form>
 
-      <button
-        (click)="closePopup()"
-        class="absolute top-3 right-3 text-2xl text-black cursor-pointer"
-      >
-        <i class="fa fa-times"></i>
-      </button>
+      <div class="mt-4 flex justify-between">
+        <button
+          *ngIf="isEdit"
+          (click)="editEvent()"
+          class="bg-[rgb(255,102,102)] text-white px-6 py-3 mt-9 rounded-2xl cursor-pointer hover:bg-[rgb(221,51,51)] transition duration-300 w-[20%]"
+        >
+          Edit Speichern
+        </button>
+        <button
+          *ngIf="isEdit"
+          (click)="deleteEvent()"
+          class="bg-[rgb(255,102,102)] text-white px-6 py-3 mt-9 rounded-2xl cursor-pointer hover:bg-[rgb(221,51,51)] transition duration-300 w-[20%]"
+        >
+          Delete Speichern
+        </button>
+      </div>
     </div>
   </div>
 

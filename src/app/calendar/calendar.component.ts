@@ -18,8 +18,11 @@ export class CalendarComponent implements AfterViewInit {
 
   showPopup: boolean = false;
   selectedOption: string | null = null;
+  isEdit: boolean = false;
+  eventClicked: boolean = false; 
 
   eventData = {
+    id: '',
     title: '',
     description: '',
     startDate: '',
@@ -54,6 +57,7 @@ export class CalendarComponent implements AfterViewInit {
 
   closePopup() {
     this.showPopup = false;
+    this.isEdit = false;
     this.selectedOption = null;
     this.resetEventData();
   }
@@ -62,6 +66,7 @@ export class CalendarComponent implements AfterViewInit {
     if (this.fullCalendar) {
       const calendarApi = this.fullCalendar.getApi();
       const newEvent = {
+        id: this.eventData.id || new Date().getTime().toString(), 
         title: this.eventData.title,
         start: this.eventData.startDate,
         end: this.eventData.endDate,
@@ -82,13 +87,17 @@ export class CalendarComponent implements AfterViewInit {
   handleDateClick(arg: any) {
     this.eventData.startDate = arg.dateStr;
     this.eventData.endDate = arg.dateStr;
+    this.eventData.id = ''; 
+    this.eventClicked = false; 
+
+    this.isEdit = false;
     this.openPopup();
   }
 
   handleEventClick(arg: any) {
     const event = arg.event;
-
     this.eventData = {
+      id: event.id,
       title: event.title || '',
       description: event.extendedProps.description || '',
       startDate: event.startStr || '',
@@ -100,6 +109,10 @@ export class CalendarComponent implements AfterViewInit {
       endTime: event.extendedProps.endTime || ''
     };
 
+    this.isEdit = true; 
+    this.eventClicked = true; 
+
+
     this.openPopup();
   }
 
@@ -107,8 +120,28 @@ export class CalendarComponent implements AfterViewInit {
     this.selectedOption = option;
   }
 
+  editEvent() {
+
+    if (!this.isEdit || !this.eventData.title) return;
+    this.showPopup = false;
+  }
+
+  deleteEvent() {
+    if (!this.isEdit || !this.eventData.id) return;
+    if (this.fullCalendar) {
+      const calendarApi = this.fullCalendar.getApi();
+      const event = calendarApi.getEventById(this.eventData.id);
+      if (event) {
+        event.remove(); 
+      }
+      this.showPopup = false;
+      this.resetEventData(); 
+    }
+  }
+
   resetEventData() {
     this.eventData = {
+      id: '',
       title: '',
       description: '',
       startDate: '',
